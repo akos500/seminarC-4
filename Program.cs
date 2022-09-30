@@ -9,8 +9,6 @@ int numberA = ReadInt("Введите число A: ");
 int numberB = ReadInt("Введите число B: ");
 toDegree(numberA, numberB);
 
-
-// Функция возведения в степень
 static void toDegree(int a, int b)
 {
     int result = 1;
@@ -21,7 +19,6 @@ static void toDegree(int a, int b)
     Console.WriteLine(result);
 }
 
-// Функция ввода
 int ReadInt(string message)
 {
     Console.WriteLine(message);
