@@ -1,11 +1,29 @@
-﻿Console.WriteLine("введите число A");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число B");
-int b = Convert.ToInt32(Console.ReadLine());
-int step = a;
+﻿
+/*
+Напишите цикл, который принимает на вход два числа (A и B)
+и возводит число A в натуральную степень B. Решить задачу 
+с использованием методов.
+*/
 
-for (int i = 1; i < b; i = i + 1)
+int numberA = ReadInt("Введите число A: ");
+int numberB = ReadInt("Введите число B: ");
+toDegree(numberA, numberB);
+
+
+// Функция возведения в степень
+void toDegree(int a, int b)
 {
-step = step * a;
+    int result = 1;
+    for (int i = 1; i <= b; i = i + 1)
+    {
+        result = result * a;
+    }
+    Console.WriteLine(result);
 }
-Console.WriteLine("A в степени B равно: " + step);
+
+// Функция ввода
+int ReadInt(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
+}
